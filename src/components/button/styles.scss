@@ -1,0 +1,69 @@
+@import "../../resources/css/scss/variable";
+@import "../../resources/css/scss/mixins";
+
+.btn {
+
+    background-color: $primary;
+    color: $white;
+    border: none;
+    border-radius: rem(12px);
+    font-size: rem(16px);
+    font-weight: bold;
+    line-height: rem(16px);
+    transition: 0.3s all ease-in;
+
+    &:hover {
+        background-color: #5834B1;
+    }
+
+    &:disabled,
+    &.disabled {
+        background-color: #DEE1E3;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+
+.btn-lg {
+    padding: rem(18px) rem(20px);
+}
+
+.btn-md {
+    padding: rem(16px) rem(20px);
+}
+
+.hover {
+    background-color: #5834B1
+}
+
+.secondary-btn {
+    background-color: $secondary;
+
+    &:hover {
+        background-color: #EEAF1B;
+    }
+}
+
+.secHover {
+    background-color: #EEAF1B;
+
+    &:hover {
+        background-color: #EEAF1B;
+    }
+}
+
+.prod-btn {
+    padding: rem(15px) rem(12px) rem(8px);
+    background-color: $white;
+    border: rem(1px) solid #EFF0F1;
+    border-radius: rem(8px);
+
+    &:hover {
+        border: rem(1px) solid $primary;
+        background-color: $white;
+    }
+}
+
+.add-btn {
+    padding: rem(15px) rem(32px) rem(8px);
+}

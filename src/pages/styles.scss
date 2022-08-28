@@ -1,0 +1,11 @@
+@import "../resources/css/scss/variable";
+@import "../resources/css/scss/mixins";
+.quantity{
+    padding: rem(10px) rem(23px);
+    display: inline-block;
+    font-size: rem(20px);
+    line-height: rem(28px);
+    color: #02020B;
+    border: none;
+    font-weight: 700;
+}
