@@ -12,13 +12,13 @@
     line-height: rem(16px);
     transition: 0.3s all ease-in;
 
-    &:hover {
-        background-color: #5834B1;
+    &:hover,&:focus{
+        background-color: $btnPrimaryHover;
     }
 
     &:disabled,
     &.disabled {
-        background-color: #DEE1E3;
+        background-color: $btnDisabled;
         cursor: not-allowed;
         pointer-events: none;
     }
@@ -32,38 +32,64 @@
     padding: rem(16px) rem(20px);
 }
 
-.hover {
-    background-color: #5834B1
-}
-
-.secondary-btn {
+.btn-secondary {
     background-color: $secondary;
 
-    &:hover {
-        background-color: #EEAF1B;
+    &:hover, &:focus {
+        background-color: $btnSecondaryHover;
     }
 }
 
-.secHover {
-    background-color: #EEAF1B;
-
-    &:hover {
-        background-color: #EEAF1B;
-    }
-}
-
-.prod-btn {
+.btn-quantity {
     padding: rem(15px) rem(12px) rem(8px);
     background-color: $white;
     border: rem(1px) solid #EFF0F1;
     border-radius: rem(8px);
 
-    &:hover {
+    &:hover , &:focus {
         border: rem(1px) solid $primary;
         background-color: $white;
     }
 }
 
-.add-btn {
+.btn-add {
     padding: rem(15px) rem(32px) rem(8px);
+}
+.btn-link{
+    background-color: transparent;
+    color: $primary;
+    &:hover, &:focus{
+        background-color: transparent;
+        color: $btnPrimaryHover;
+    }
+    &:disabled,
+    &.disabled {
+        background-color: transparent;
+        color: $gray50;
+    }
+}
+.btn-link-secondary{
+    color: $secondary;
+    &:hover,&:focus{
+        color: $btnSecondaryHover;
+    }
+}
+
+.btn-link-underline{
+    text-decoration: underline;
+    color: $gray;
+    font-size: rem(20px);
+    line-height: rem(20px);
+    font-weight: 400;
+    &:hover, &:focus{
+        color: $primary;
+    }
+} 
+.btn-icon{
+    display: inline-flex;
+    align-items: center;
+    width: rem(110px);
+    &:hover svg , &:focus svg{
+        margin-left: rem(18px);
+    }
 }
