@@ -1,0 +1,88 @@
+@import "../../resources/css/scss/variable";
+@import "../../resources/css/scss/mixins";
+
+.formControl {
+  padding: rem(14px) rem(16px);
+  width: 100%;
+  margin-bottom: rem(20px);
+  border: 1px solid $gray10;
+  font-size: rem(16px);
+  line-height: rem(20px);
+  border-radius: $input-border-radius;
+  transition: 0.3s all ease-in;
+  outline: 0;
+  position: relative;
+  &:hover + span,
+  &:focus + span {
+    display: flex;
+  }
+  @include placeholder {
+    color: $gray70;
+    transition: 0.3s all ease-in-out;
+  }
+  &:hover,
+  &:focus {
+    border-color: $primary;
+    caret-color: $primary;
+    padding-right: rem(40px);
+  }
+  &:disabled,
+  &.disabled {
+    border-color: $gray20;
+    background-color: $gray10;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  &.error,
+  &:invalid {
+    border-color: $danger;
+  }
+}
+
+.borderColor {
+  .formControl {
+    border-color: $primary;
+    &:hover,
+    &:focus {
+      border-color: $primary;
+    }
+  }
+}
+
+.inputWithIcon {
+  .formControl {
+    color: $gray70;
+    &:hover,
+    &:focus {
+      border-color: $gray10;
+    }
+  }
+}
+.input-icon {
+  .right-icon {
+    display: flex;
+    img {
+      width: auto;
+    }
+  }
+}
+.left-icon,
+.right-icon {
+  position: absolute;
+  top: 0;
+  width: rem(40px);
+  height: rem(48px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  img {
+    width: rem(22px);
+  }
+}
+
+.left-icon {
+  right: 0;
+  z-index: 1;
+  pointer-events: none;
+}

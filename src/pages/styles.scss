@@ -13,3 +13,23 @@
     width: 22%;
     margin-left: rem(9px);
 }
+.errorMsg{
+    display: flex;
+    flex-direction: column;
+    small{
+        color: $danger;
+        font-size: rem(13px);
+        line-height: rem(14px);
+        margin-top: rem(6px);
+    }
+    span{
+        color: $errorblack;
+        font-weight: 600;
+        font-size: rem(16px);
+        line-height: rem(24px);
+    }
+}
+.parentDiv{
+    position: relative;
+    width: 32%;
+}
